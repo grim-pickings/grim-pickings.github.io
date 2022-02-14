@@ -4,6 +4,6 @@
 	@import '$lib/css/screens.css';
 
 	.title.home {
-		margin-top: 225px;
+		margin-top: 325px;
 	}
 </style>
