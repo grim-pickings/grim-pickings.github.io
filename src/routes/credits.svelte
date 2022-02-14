@@ -2,4 +2,4 @@
 	import Site from '$lib/Site.svelte';
 </script>
 
-<Site initialScreen="home" />
+<Site initialScreen="credits" />
