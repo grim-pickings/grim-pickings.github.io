@@ -51,8 +51,6 @@
 </div>
 
 <style>
-	@import 'semantic-ui-css/semantic.css';
-
 	:global(@font-face) {
 		family: 'Egypt';
 		src: url('$lib/fonts/Egyptaxt.ttf');

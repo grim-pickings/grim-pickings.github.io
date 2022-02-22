@@ -3,3 +3,7 @@
 </svelte:head>
 
 <slot />
+
+<style>
+	@import 'semantic-ui-css/semantic.css';
+</style>
