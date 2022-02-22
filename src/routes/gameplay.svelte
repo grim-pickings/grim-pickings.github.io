@@ -1,5 +1,7 @@
 <script>
-	import Site from '$lib/Site.svelte';
+	import Web from '$lib/website';
 </script>
 
-<Site initialScreen="gameplay" />
+<Web>
+	<h1>Gameplay</h1>
+</Web>

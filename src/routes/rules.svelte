@@ -3,5 +3,5 @@
 </script>
 
 <Web>
-	<h1>Technology</h1>
+	<h1>How to Play</h1>
 </Web>
