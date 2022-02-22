@@ -20,6 +20,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"semantic-ui-css": "^2.4.1"
+		"semantic-ui-css": "^2.4.1",
+		"firebase": "^9.6.7"
 	}
 }
