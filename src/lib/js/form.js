@@ -21,11 +21,9 @@ function signUp(){
     const user = firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(function(result) {
       console.log("Account created successfully");
-      firebase.database().ref("Users/"+ result.user.uid).set({
+      firebase.database().ref("Users/"+ user).set({
         Name: name,
-        Email: result.user.email,
-        userRole: "user",
-        UserId: result.user.uid
+        Email: email
       })
     })
     .catch(function(error) {
