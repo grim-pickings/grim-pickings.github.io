@@ -2,17 +2,12 @@
 	export let columns = null;
 	export let textAlign = '';
 	export let verticalAlign = '';
+	export let style = '';
+	export let className = '';
 
 	$: columnsProp = numToString(columns);
-	$: textAlignProp = textAlign || '';
-	$: verticalAlignProp = verticalAlign || '';
-
-	$: alignProp = toAlignString(textAlignProp, verticalAlignProp);
-
-	function toAlignString(hor, ver) {
-		let str = `${ver} ${hor}`.trim();
-		return !str ? str : str + ' aligned';
-	}
+	$: textAlignProp = textAlign ? `${textAlign} aligned` : '';
+	$: verticalAlignProp = verticalAlign ? `${verticalAlign} aligned` : '';
 
 	function numToString(num) {
 		const numVal = isNaN(num) ? num : Number(num);
@@ -71,6 +66,6 @@
 	}
 </script>
 
-<div class="{columnsProp} {alignProp} row">
+<div class="{columnsProp} {textAlignProp} {verticalAlignProp} row {className}" {style}>
 	<slot />
 </div>

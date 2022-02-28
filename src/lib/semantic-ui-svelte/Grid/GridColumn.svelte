@@ -1,18 +1,16 @@
 <script>
+	import { numToString } from '$lib/js/general';
 	export let textAlign = '';
 	export let verticalAlign = '';
+	export let style = '';
+	export let className = '';
+	export let width = '';
 
-	$: textAlignProp = textAlign || '';
-	$: verticalAlignProp = verticalAlign || '';
-
-	$: alignProp = toAlignString(textAlignProp, verticalAlignProp);
-
-	function toAlignString(hor, ver) {
-		let str = `${ver} ${hor}`.trim();
-		return !str ? str : str + ' aligned';
-	}
+	$: textAlignProp = textAlign ? `${textAlign} aligned` : '';
+	$: verticalAlignProp = verticalAlign ? `${verticalAlign} aligned` : '';
+	$: widthProp = width ? `${numToString(width)} wide` : '';
 </script>
 
-<div class="{alignProp} column">
+<div class="{widthProp} {verticalAlignProp} {textAlignProp} column {className}" {style}>
 	<slot />
 </div>

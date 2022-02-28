@@ -1,5 +1,9 @@
 <script>
+	// import { goto } from '$app/navigation';
 	import { Menu, Menuitem, Button } from 'svelte-mui';
+	import Zombie from '$lib/images/Zombie/PNG/Poses/character_zombie_think.png';
+
+	let posX = 0;
 </script>
 
 <nav>
@@ -27,19 +31,19 @@
 				</Button>
 
 				<Menuitem href="/gameplay">
-					<Button fullWidth color="white">Gamplay</Button>
+					<Button fullWidth color="white"><span>Gamplay</span></Button>
 				</Menuitem>
 
 				<Menuitem href="/art">
-					<Button fullWidth color="white">Art</Button>
+					<Button fullWidth color="white"><span>Art</span></Button>
 				</Menuitem>
 
 				<Menuitem href="/tech">
-					<Button fullWidth color="white">Technology</Button>
+					<Button fullWidth color="white"><span>Technology</span></Button>
 				</Menuitem>
 
 				<Menuitem href="/credits">
-					<Button fullWidth color="white">Credits</Button>
+					<Button fullWidth color="white"><span>Credits</span></Button>
 				</Menuitem>
 			</Menu>
 		</li>
@@ -48,6 +52,9 @@
 
 <div class="content">
 	<slot />
+	<div class="character" style="left: calc({50 + posX}% - 48px);">
+		<img src={Zombie} alt="zombie" />
+	</div>
 </div>
 
 <style>
@@ -59,6 +66,11 @@
 	:global(.egypt) {
 		font-family: Egypt, 'Times New Roman', Times, serif;
 		font-weight: 400;
+	}
+
+	:global(:root) {
+		--main-bg: #23203e;
+		--content-height: calc(100vh - 50px);
 	}
 
 	nav {
@@ -85,13 +97,22 @@
 		text-decoration: none;
 	}
 
-	.content {
-		background-color: #23203e;
-		height: calc(100vh - 50px);
+	@media all and (min-width: 768px) {
+		nav a,
+		nav span {
+			font-size: 21px;
+		}
 	}
 
 	.content {
+		background-color: #23203e;
+		min-height: var(--content-height);
 		color: white;
 		padding: 20px;
+	}
+
+	.character {
+		position: fixed;
+		bottom: 0;
 	}
 </style>
