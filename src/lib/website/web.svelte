@@ -1,5 +1,6 @@
 <script>
 	// import { goto } from '$app/navigation';
+	import { base } from '$app/paths';
 	import { Menu, Menuitem, Button } from 'svelte-mui';
 	import Zombie from '$lib/images/Zombie/PNG/Poses/character_zombie_think.png';
 
@@ -9,19 +10,19 @@
 <nav>
 	<div>
 		<Button color="white">
-			<a href="/">Grim Pickings</a>
+			<a href={base}>Grim Pickings</a>
 		</Button>
 	</div>
 
 	<ul>
 		<li>
 			<Button color="white">
-				<a href="/">Home</a>
+				<a href={base}>Home</a>
 			</Button>
 		</li>
 		<li>
 			<Button color="white">
-				<a href="/rules">How To Play</a>
+				<a href="{base}/rules">How To Play</a>
 			</Button>
 		</li>
 		<li>
@@ -30,19 +31,19 @@
 					<span>About</span>
 				</Button>
 
-				<Menuitem href="/gameplay">
+				<Menuitem href="{base}/gameplay">
 					<Button fullWidth color="white"><span>Gamplay</span></Button>
 				</Menuitem>
 
-				<Menuitem href="/art">
+				<Menuitem href="{base}/art">
 					<Button fullWidth color="white"><span>Art</span></Button>
 				</Menuitem>
 
-				<Menuitem href="/tech">
+				<Menuitem href="{base}/tech">
 					<Button fullWidth color="white"><span>Technology</span></Button>
 				</Menuitem>
 
-				<Menuitem href="/credits">
+				<Menuitem href="{base}/credits">
 					<Button fullWidth color="white"><span>Credits</span></Button>
 				</Menuitem>
 			</Menu>

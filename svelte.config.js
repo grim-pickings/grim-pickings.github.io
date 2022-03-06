@@ -1,9 +1,21 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-static';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+
+		files: {
+			assets: 'static',
+			hooks: 'src/hooks',
+			lib: 'src/lib',
+			routes: 'src/routes',
+			template: 'src/app.html'
+		},
+		paths: {
+			assets: '',
+			base: '/build'
+		}
 	}
 };
 
