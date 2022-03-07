@@ -26,6 +26,11 @@
 			</Button>
 		</li>
 		<li>
+			<Button color="white">
+				<a href="{base}/pwa/login">The App</a>
+			</Button>
+		</li>
+		<li>
 			<Menu --bg-popover="#6B5580" dy={40}>
 				<Button slot="activator" color="white" ripple={false}>
 					<span>About</span>
