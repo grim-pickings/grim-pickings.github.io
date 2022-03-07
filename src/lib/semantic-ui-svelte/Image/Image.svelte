@@ -9,8 +9,11 @@
 	export let circularProp = circular ? 'circular' : '';
 	export let uiProp = ui ? 'ui' : '';
 	export let roundedProp = rounded ? 'rounded' : '';
+
+	export let style = '';
+	export let className = '';
 </script>
 
-<div class="{uiProp} image {roundedProp} {size} {circularProp}">
+<div class="{uiProp} image {roundedProp} {size} {circularProp} {className}" {style}>
 	<img {src} {alt} />
 </div>

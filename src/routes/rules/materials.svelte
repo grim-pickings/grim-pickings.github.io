@@ -3,5 +3,5 @@
 </script>
 
 <Web>
-	<h1>Background Info</h1>
+	<h1>Materials</h1>
 </Web>

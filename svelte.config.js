@@ -14,7 +14,7 @@ const config = {
 		},
 		paths: {
 			assets: '',
-			base: '/n436-spring22/build'
+			base: ''
 		}
 	}
 };

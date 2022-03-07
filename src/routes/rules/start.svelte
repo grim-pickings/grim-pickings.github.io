@@ -3,5 +3,5 @@
 </script>
 
 <Web>
-	<h1>Background Info</h1>
+	<h1>Start Play</h1>
 </Web>

@@ -1,14 +1,15 @@
 <script>
+	import { base } from '$app/paths';
 	import Web from '$lib/website';
 	import { Grid, Card } from '$lib/semantic-ui-svelte';
 
 	const sections = [
-		{ name: 'Background Info', index: 1 },
-		{ name: 'Setup', index: 2 },
-		{ name: 'Materials', index: 3 },
-		{ name: 'Start Play', index: 4 },
-		{ name: 'Phases', index: 5 },
-		{ name: 'How To Win', index: 6 }
+		{ name: 'Background Info', index: 1, route: '/story' },
+		{ name: 'Setup', index: 2, route: '/setup' },
+		{ name: 'Materials', index: 3, route: '/materials' },
+		{ name: 'Start Play', index: 4, route: '/start' },
+		{ name: 'Phases', index: 5, route: '/phases' },
+		{ name: 'How To Win', index: 6, route: '/win' }
 	];
 
 	function regroupSections(acc, section) {
@@ -45,14 +46,16 @@
 								<h1>{section.index}</h1>
 							</Grid.Column>
 							<Grid.Column width="14">
-								<Card style="background-color: var(--main-bg); box-shadow: none;">
-									<Card.Content>
-										<Card.Header style="color:white">{section.name}</Card.Header>
-										<Card.Description style="color:white">
-											Lorem ipsum, dolor sit amet consectetur adipisicing.
-										</Card.Description>
-									</Card.Content>
-								</Card>
+								<a href="{base}/rules{section.route}">
+									<Card style="background-color: var(--main-bg); box-shadow: none;">
+										<Card.Content>
+											<Card.Header style="color:white">{section.name}</Card.Header>
+											<Card.Description style="color:white">
+												Lorem ipsum, dolor sit amet consectetur adipisicing.
+											</Card.Description>
+										</Card.Content>
+									</Card>
+								</a>
 							</Grid.Column>
 						</Grid>
 					</Grid.Column>
@@ -63,13 +66,4 @@
 </Web>
 
 <style>
-	@media all and (min-width: 768px) {
-		h1 {
-			font-size: 66px;
-		}
-
-		h2 {
-			font-size: 25px;
-		}
-	}
 </style>

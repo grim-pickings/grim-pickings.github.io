@@ -10,14 +10,14 @@
 <nav>
 	<div>
 		<Button color="white">
-			<a href={base}>Grim Pickings</a>
+			<a href="{base}/">Grim Pickings</a>
 		</Button>
 	</div>
 
 	<ul>
 		<li>
 			<Button color="white">
-				<a href={base}>Home</a>
+				<a href="{base}/">Home</a>
 			</Button>
 		</li>
 		<li>
@@ -115,5 +115,15 @@
 	.character {
 		position: fixed;
 		bottom: 0;
+	}
+
+	@media all and (min-width: 768px) {
+		:global(h1) {
+			font-size: 66px;
+		}
+
+		:global(h2) {
+			font-size: 25px;
+		}
 	}
 </style>

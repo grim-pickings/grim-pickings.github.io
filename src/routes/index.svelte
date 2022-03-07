@@ -14,14 +14,6 @@
 </Web>
 
 <style>
-	h1 {
-		font-size: 66px;
-	}
-
-	h2 {
-		font-size: 25px;
-	}
-
 	h1,
 	h2 {
 		margin: 0;
