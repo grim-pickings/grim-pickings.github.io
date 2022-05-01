@@ -11,7 +11,7 @@ function initNav() {
 }
 
 async function generateContent() {
-	const hash = location.hash.replace('#', '');
+	const hash = location.hash.replace('#', '') || 'home';
 	try {
 		const content = await $.get(`views/${hash}.html`);
 		$('#app').html(content);
