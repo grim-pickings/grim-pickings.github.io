@@ -1,0 +1,77 @@
+/* rem setup */
+
+html {
+	font-size: 16px;
+}
+
+@media screen and (max-width: 1000px) {
+	html {
+		font-size: 10px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	html {
+		font-size: 8px;
+	}
+}
+
+.site {
+	background-color: #000;
+	min-height: 100vh;
+	color: #fff;
+}
+
+/* nav styling */
+
+nav {
+	background-color: #000 !important;
+	font-size: 2rem !important;
+}
+
+.site nav.ui.secondary.inverted.menu a.item {
+	color: #fff !important;
+}
+
+.site nav.ui.secondary.inverted.menu a.item:hover {
+	/* border-bottom: 1px solid #fff; */
+	text-decoration: underline;
+}
+
+.site nav.ui.secondary.inverted.menu div#nav-about div.menu a.item {
+	color: #000 !important;
+}
+
+/* home styling */
+
+.site .home .mobile {
+	display: none;
+}
+
+@media screen and (max-width: 400px) {
+	.site .home .mobile {
+		display: flex;
+	}
+	.site .home .desktop {
+		display: none;
+	}
+}
+
+.home header.header {
+	min-height: 75vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.home header.header h1 {
+	font-size: 5rem;
+}
+
+.home header.header h2 {
+	font-size: 2.5rem;
+}
+
+.home .desktop header.header h2 {
+	margin-right: 4.25rem;
+}
