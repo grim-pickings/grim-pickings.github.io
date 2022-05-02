@@ -123,6 +123,7 @@ nav {
 	flex-wrap: wrap;
 	overflow-y: scroll;
 	height: 400px;
+	padding-bottom: 2rem;
 }
 
 .credits .credit-card {
