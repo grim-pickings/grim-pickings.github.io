@@ -23,6 +23,7 @@ html {
 .site {
     background-color: #000;
     min-height: 100vh;
+    /* padding-bottom: 25vh; */
     color: #fff;
 }
 
@@ -37,7 +38,7 @@ html {
 .site .ui.segment.bottom-bar {
     width: 100%;
     height: 25vh;
-    position: absolute;
+    position: fixed;
     bottom: 0;
 }
 
@@ -51,6 +52,7 @@ a {
 nav {
     background-color: #000 !important;
     font-size: 2rem !important;
+    /* width: 100%; */
 }
 
 .site nav.ui.secondary.inverted.menu a.item {
@@ -106,6 +108,16 @@ nav {
     /* overflow-y: scroll; */
 }
 
+@media screen and (max-width: 400px) {
+    .art {
+        flex-wrap: wrap;
+    }
+
+    .art .text {
+        padding: 10px;
+    }
+}
+
 .art .artpiece {
     width: 250px;
 }
@@ -121,8 +133,8 @@ nav {
 .credits {
     display: flex;
     flex-wrap: wrap;
-    overflow-y: scroll;
-    height: 400px;
+    /* overflow-y: scroll; */
+    /* height: 400px; */
     padding-bottom: 2rem;
 }
 
